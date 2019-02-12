@@ -57,18 +57,12 @@ for immagini in riferimenti:
     a = a + 1
 print("ho completato la codifica delle immagini campione ")
 
-try:
-    mqtt.single("notify/notifica_nicola", "ho completato la codifica delle immagini campione", hostname=ip_mqtt)
-except:
-    print("errore mqtt")
-
-
 
 while True:
     print("catturo l'immagine dalla PIcamera")
     camera.capture(output, format="rgb")
 
-    # individuo i faccie presenti nell'immagine
+    # individuo le faccie presenti nell'immagine
     visi_individuati = face_recognition.face_locations(output)
     print("Ho trovato {} visi nell'immagine".format(len(visi_individuati)))
     face_encodings = face_recognition.face_encodings(output, visi_individuati)
