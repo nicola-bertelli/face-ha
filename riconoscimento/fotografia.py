@@ -15,7 +15,7 @@ camera.resolution = (risoluzione_x, risoluzione_y)
 camera.rotation = (rotazione)
 try:
     camera.start_preview()
-    time.sleep(10)
+    time.sleep(3)
     camera.capture('immagine.jpg')
     camera.stop_preview()
 finally:
