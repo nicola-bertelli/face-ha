@@ -1,0 +1,17 @@
+stato_camera:
+  risoluzione:
+    x: 320
+    y: 240
+  rotazione:
+    gradi: 180
+
+mqtt:
+  ip_server: "indirizzo ip server mqtt"
+
+persone_conosciute:
+- Nicola:
+    file: "/home/pi/riconoscimento/nicola.jpg"
+    topic_sensore: "/riconoscimento_facciale/nicola"
+- Pamela:
+    file: "/home/pi/riconoscimento/pamela.jpg"
+    topic_sensore: "/riconoscimento_facciale/pamela"
