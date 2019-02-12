@@ -24,26 +24,6 @@ print("rotazione camera: " + str(rotazione))
 print("indirizzo ip server mqtt: " + ip_mqtt)
 
 
-# NOTIFICA AVVIO SISTEMA
-try:
-    mqtt.single("notify/notifica_nicola", "riconoscimento facciale avviato", hostname=ip_mqtt)
-except:
-    print ("errore mqtt")
-
-try:
-    # notifica indirizzo IP  tramite HA
-    sk = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    sk.connect(("apple.com",80))
-    personalip = sk.getsockname()[0]
-except:
-    print ("indirizzo ip non individuato")
-
-try:
-    mqtt.single("notify/notifica_nicola", ("indirizzo ip riconoscimento facciale " + str(personalip)), hostname=ip_mqtt)
-except:
-    print ("errore mqtt")
-
-
 
 camera = picamera.PiCamera()
 camera.resolution = (risoluzione_x, risoluzione_y)
