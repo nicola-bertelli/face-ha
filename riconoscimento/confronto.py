@@ -17,7 +17,7 @@ risoluzione_y = configurazione['stato_camera']['risoluzione']['y']
 rotazione = configurazione['stato_camera']['rotazione']['gradi']
 ip_mqtt = configurazione['mqtt']['ip_server']
 
-print("DATI DI CONFIGURAZIONE MQTT:")
+print("DATI DI CONFIGURAZIONE:")
 print("risolizione x: " + str(risoluzione_x))
 print("risoluzione y: " + str(risoluzione_y))
 print("rotazione camera: " + str(rotazione))
